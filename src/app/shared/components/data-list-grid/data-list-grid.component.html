@@ -1,0 +1,9 @@
+<mat-grid-list [cols]="getCalculatedCols()" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let tile of tiles"
+                 (click)="onClicked(tile)" class="list_grid_tile"
+                 [style.background]="tile.color">
+    <p>
+      {{tile.title}}
+    </p>
+  </mat-grid-tile>
+</mat-grid-list>

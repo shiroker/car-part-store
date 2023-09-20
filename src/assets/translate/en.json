@@ -1,0 +1,42 @@
+{
+  "HOME": {
+    "TITLE": "AT EXPRESS - ENGLISH",
+    "TAB": {
+      "ADMINISTRATION": "Administration",
+      "STORE": "Store",
+      "ADD": "Add Item"
+    }
+  },
+  "HELP": {
+    "TITLE": "Help"
+  },
+  "BUTTON": {
+    "LABEL": "Language -> DE"
+  },
+  "DATA": {
+    "NO": "No.",
+    "NAME": "Name",
+    "DESCRIPTION": "Description",
+    "PRICE": "Price",
+    "QUANTITY": "Quantity",
+    "PACKAGE_QUANTITY": "Package-Quantity",
+    "INCLUDED_QUANTITY": "included Quantity",
+    "WEIGHT": "Weight",
+    "ACTIONS": "Actions",
+    "BUTTON": {
+      "EDIT": "Discount grant",
+      "DELETE": "Delete"
+    }
+  },
+  "MENU_BAR": {
+    "TITLE": {
+      "START": "Start",
+      "ORDER": "Order"
+    }
+  },
+  "DELETE_HINT_TEXT": "Are you really sure to delete ",
+  "CONFIRM_DELETE": {
+    "CANCEL": "CANCEL",
+    "CONFIRM": "Yes, Delete"
+  }
+}

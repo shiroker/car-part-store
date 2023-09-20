@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-select [placeholder]="placeholder" panelWidth="20">
+    <mat-option *ngFor="let item of allItems" (onSelectionChange)="chosenItem(item.data)">
+      {{item.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

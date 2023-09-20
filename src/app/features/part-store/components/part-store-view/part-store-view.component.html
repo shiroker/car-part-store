@@ -1,0 +1,12 @@
+
+<div *ngIf="!(loadAllDataLoading$ | async)">
+  <app-drop-down style="padding-right: 50px"
+                 [allItems]="allCarPartTypes$ | async | defaultArray"
+                 [placeholder]="carPartTypePlaceholder"
+                 (onClick)="carPartTypeChange($event)">
+  </app-drop-down>
+  <app-data-list-grid
+    [tiles]="allCarPartsForDataTable$ | async | defaultArray | dataListFilter : searchValue"
+    (onClickedData)="decrementQuantityOfCarPart($event)"
+  ></app-data-list-grid>
+</div>

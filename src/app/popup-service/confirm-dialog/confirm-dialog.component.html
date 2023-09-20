@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{headerTitle}}</h1>
+<div mat-dialog-content>
+  <p>{{hintText |translate}} {{itemName}} ?</p>
+</div>
+<div mat-dialog-actions>
+  <mat-button-toggle style="background-color: #f56969" mat-button (click)="onCancelClick()">{{cancelLabel | translate}}</mat-button-toggle>
+  <mat-button-toggle style="background-color: #56e777" mat-button [mat-dialog-close]="idOfItem">{{confirmLabel | translate}}</mat-button-toggle>
+</div>

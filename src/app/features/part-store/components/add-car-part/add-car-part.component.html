@@ -1,0 +1,50 @@
+<div class="center">
+  <form [formGroup]="formGroup">
+    <h1> Ersatzteil Hinzufügen</h1>
+    <h4> Name: </h4>
+    <mat-form-field>
+      <input matInput placeholder="artikelname" formControlName="name">
+    </mat-form-field>
+    <h4> Teil-Art: </h4>
+    <app-drop-down
+      [allItems]="allCarPartTypes$ | async | defaultArray"
+      [placeholder]="carPartTypePlaceholder"
+      (onClick)="carPartTypeChange($event)">
+    </app-drop-down>
+    <h4> Marke: </h4>
+    <app-drop-down
+      [allItems]="allCarMarke$ | async | defaultArray"
+      [placeholder]="carMarkePlaceholder"
+      (onClick)="carMarkeChange($event)">
+    </app-drop-down>
+    <h4> Model: </h4>
+    <mat-form-field>
+      <input matInput placeholder="model" formControlName="model">
+    </mat-form-field>
+    <h4> Preis: </h4>
+    <mat-form-field>
+      <input matInput placeholder="preis" formControlName="price">
+    </mat-form-field>
+    <h4> Anzahl: </h4>
+    <mat-form-field>
+      <input matInput placeholder="anzahl" formControlName="quantity">
+    </mat-form-field>
+    <h4> Enthaltene Anzahl in der Verpackung: </h4>
+    <mat-form-field>
+      <input matInput placeholder="Anzahl in der Verpackung" formControlName="quantityLimit">
+    </mat-form-field>
+    <h4>Verpackungsanzahl: </h4>
+    <mat-form-field>
+      <input matInput placeholder="Anzahl der Verpackungen" formControlName="packageCount">
+    </mat-form-field>
+    <div>
+      <button mat-raised-button
+              matTooltip="Hinzufügrn"
+              matTooltipPosition="left"
+              (click)="onAddClicked()"
+              style="background-color: deepskyblue">
+        Hinzufügen
+      </button>
+    </div>
+  </form>
+</div>

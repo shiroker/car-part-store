@@ -1,0 +1,67 @@
+<div>
+  <h1>{{headerLabel}}</h1>
+</div>
+
+<div class="example-container mat-elevation-z4">
+  <mat-table *ngIf="rowTemplate" [dataSource]="getTableDataSource()">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.NO' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container [matColumnDef]="'name'">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.NAME' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.DESCRIPTION' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.description}} </mat-cell>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.PRICE' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.totalPrice}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="totalWeightInKg">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.WEIGHT' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.weight}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.QUANTITY' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.quantity}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantityLimit">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell">{{'DATA.INCLUDED_QUANTITY' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.quantityLimit}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="packageCount">
+      <mat-header-cell *matHeaderCellDef class="mat-header-cell"> {{'DATA.PACKAGE_QUANTITY' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="mat-cell"> {{element.packageCount}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef>{{'DATA.ACTIONS' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element;" style="width: 1600px !important;">
+        <tr>
+          <ng-container *ngTemplateOutlet="rowTemplate; context: {$implicit: element, row: element, rowIndex: element.index}">
+          </ng-container>
+        </tr>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+             (click)="selection.toggle(row)">
+    </mat-row>
+  </mat-table>
+</div>
+

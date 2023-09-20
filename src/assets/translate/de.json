@@ -1,0 +1,42 @@
+{
+  "HOME": {
+    "TITLE": "AT EXPRESS - DEUTSCH",
+    "TAB": {
+      "ADMINISTRATION": "Verwaltung",
+      "STORE": "Store",
+      "ADD": "Hinzufügen"
+    }
+  },
+  "HELP": {
+    "TITLE": "Hilfe"
+  },
+  "BUTTON": {
+    "LABEL": "Sprache -> EN"
+  },
+  "DATA": {
+    "NO": "No.",
+    "NAME": "Name",
+    "DESCRIPTION": "Beschreibung",
+    "PRICE": "Preis",
+    "QUANTITY": "Anzahl",
+    "PACKAGE_QUANTITY": "Packet-Anzahl",
+    "INCLUDED_QUANTITY": "Anzahl im Packet",
+    "WEIGHT": "Gewicht",
+    "ACTIONS": "Aktionen",
+    "BUTTON": {
+      "EDIT": "Rabatt gewähren",
+      "DELETE": "Löschen"
+    }
+  },
+  "MENU_BAR": {
+    "TITLE": {
+      "START": "Startseite",
+      "ORDER": "Bestellung"
+    }
+  },
+  "DELETE_HINT_TEXT": "Wollen Sie wirklich löschen: ",
+  "CONFIRM_DELETE": {
+    "CANCEL": "Abbrechen",
+    "CONFIRM": "Ja, Löschen"
+  }
+}

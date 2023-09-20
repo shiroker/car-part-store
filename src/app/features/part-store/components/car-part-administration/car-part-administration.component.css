@@ -1,0 +1,65 @@
+.partList{
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.FilterTable{
+  display: flex;
+  margin-bottom: 2%;
+  border: 2px solid cadetblue;
+  border-radius: 10px/10px;
+}
+
+@media(min-width: 400px)  {
+  addPartBtn{
+    right: 1%;
+  }
+}
+#ElementTable{
+  border-radius: 5px/5px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: greenyellow;
+}
+#ElementTable thead tr{
+  color: #ffffff;
+  text-align: center;
+  background-color: blueviolet;
+}
+#ElementTable th,
+#ElementTable td{
+  padding: 12px 15px;
+  text-align: center;
+  border: 2px solid cadetblue;
+
+}
+
+#ElementTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+  display: flow;
+  font-weight: bold;
+  color: #009879;
+}
+
+#ElementTable tbody tr:last-of-type {
+  font-weight: bold;
+  color: #009879;
+}
+
+.action_button_edit{
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  background-color: #56e777;
+}
+.action_button_delete{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}

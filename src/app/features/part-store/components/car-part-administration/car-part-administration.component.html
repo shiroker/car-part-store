@@ -1,0 +1,25 @@
+
+<app-data-table *ngIf="!(loadAllDataLoading$ | async)"
+                [tableData]="allParts$ | async | defaultArray"
+                [displayedColumns]="dataColumns"
+                [rowTemplate]="rowTemplate"
+>
+
+  <ng-template #rowTemplate let-row>
+    <td>
+      <button mat-raised-button matTooltip="Beabeiten"  color="primary"
+              matTooltipPosition="left" (click)="onGenerateRabat(row)"
+              class="action_button_edit">{{'DATA.BUTTON.EDIT' | translate}}
+      </button>
+    </td>
+    <td>
+      <app-action-confirm-dialog-delete [idOfElement]="row.id"
+                                        [hintText]="'DELETE_HINT_TEXT'"
+                                        [itemName]="row.name"
+                                        (acceptButtonClicked)="onRemove($event)"
+                                        [confirmButtonLabel]="'DATA.BUTTON.DELETE' | translate"
+                                 class="action_button_delete"></app-action-confirm-dialog-delete>
+    </td>
+  </ng-template>
+</app-data-table>
+

@@ -1,0 +1,34 @@
+<div style=" padding: 40px 0; text-align: center;">
+  <form [formGroup]="formGroup">
+    <h1> Ersatzteil Bestellen</h1>
+    <div mat-row>
+      <h4> Teil-Art: </h4>
+      <app-drop-down
+        [allItems]="allCarParts$ | async | defaultArray"
+        [placeholder]="carPartsPlaceholder"
+        (onClick)="carPartChange($event)">
+      </app-drop-down>
+    </div>
+    <h4> Paket-Anzahl: </h4>
+    <mat-form-field>
+      <input matInput placeholder="anzahl" formControlName="packageCount">
+    </mat-form-field>
+
+    <div mat-row>
+      <button mat-raised-button
+              matTooltip="In Warenkorb einfügen"
+              matTooltipPosition="left"
+              (click)="addToWareCorp()"
+              style="background-color: deepskyblue">
+        In Warenkorb einfügen
+      </button>
+      <button mat-raised-button
+              matTooltip="Bestellen"
+              matTooltipPosition="left"
+              (click)="orderAllParts()"
+              style="background-color: #56e777; margin: 10px">
+        Bestellen
+      </button>
+    </div>
+  </form>
+</div>
